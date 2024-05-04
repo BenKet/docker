@@ -3,7 +3,6 @@ services:
     image: redislabs/redismod
     ports:
       - '6379:6379'
-    command: --requirepass ${REDIS_PASSWORD}
   web:
     build: .
     stop_signal: SIGINT
@@ -13,6 +12,3 @@ services:
       - ./app:/app
     depends_on:
       - redis
-    environment:
-      - REDIS_PASSWORD=${REDIS_PASSWORD}
-      - REDIS_HOST=${REDIS_HOST}
