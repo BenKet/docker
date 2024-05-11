@@ -27,7 +27,7 @@ def hello():
 
 @app.route('/titanic')
 def new_page():
-    df = pd.read_csv('static/titanic.csv')  # replace 'myfile.csv' with your file name
+    df = pd.read_csv('static/titanic.csv') 
     table = df.to_html()
 
     
