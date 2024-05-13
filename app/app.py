@@ -8,8 +8,8 @@ import matplotlib.pyplot as plt
 
 app = Flask(__name__)
 
-REDIS_HOST = 'srv-captain--redis'
-REDIS_PASSWORD = 'MyBIPMPassword'
+#REDIS_HOST = 'srv-captain--redis'
+#REDIS_PASSWORD = 'MyBIPMPassword'
 
 cache = redis.Redis(host=REDIS_HOST, port=6379, password=REDIS_PASSWORD)
 
