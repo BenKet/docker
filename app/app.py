@@ -4,12 +4,13 @@ from flask import Flask, render_template
 from flask import url_for
 import pandas as pd
 import matplotlib.pyplot as plt
+from decouple import config
 
 
 app = Flask(__name__)
 
-REDIS_HOST = 'srv-captain--redis'
-REDIS_PASSWORD = 'MyBIPMPassword'
+REDIS_HOST = config('REDIS_PASSWORD') #'srv-captain--redis'
+REDIS_PASSWORD = config('REDIS_HOST') #'MyBIPMPassword'
 
 cache = redis.Redis(host=REDIS_HOST, port=6379, password=REDIS_PASSWORD)
 

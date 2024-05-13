@@ -2,3 +2,4 @@ Flask
 Redis
 pandas
 matplotlib
+python-decouple
