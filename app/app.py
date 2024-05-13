@@ -7,7 +7,11 @@ import matplotlib.pyplot as plt
 
 
 app = Flask(__name__)
-cache = redis.Redis(host='srv-captain--redis', port=6379)
+
+REDIS_HOST = 'srv-captain--redis'
+REDIS_PASSWORD = 'MyBIPMPassword'
+
+cache = redis.Redis(host=REDIS_HOST, port=6379, password=REDIS_PASSWORD)
 
 def get_hit_count():
     retries = 5
