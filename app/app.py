@@ -9,8 +9,8 @@ from decouple import config
 
 app = Flask(__name__)
 
-REDIS_HOST = config('REDIS_HOST') #'srv-captain--redis'
-REDIS_PASSWORD = config('REDIS_PASSWORD') #'MyBIPMPassword'
+REDIS_HOST = config('REDIS_HOST') 
+REDIS_PASSWORD = config('REDIS_PASSWORD')
 
 cache = redis.Redis(host=REDIS_HOST, port=6379, password=REDIS_PASSWORD)
 
