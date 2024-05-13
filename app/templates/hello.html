@@ -23,7 +23,7 @@
         <h1>I have been seen {{ count }} times.</h1>
         <h3>Visit HWR</h3>
         <a href="https://www.hwr-berlin.de">HWR Berlin</a><br>
-        <img src="{{ url_for('static', filename='works.jpg') }}" alt="Meme">
+        <img src="{{ url_for('static', filename='works.JPG') }}" alt="Meme">
         <ul>
             {% for i in range(1, count+1) %}
             <li>{{ i }}: Hello {{ name }}! </li>
